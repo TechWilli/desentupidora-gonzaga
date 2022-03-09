@@ -37,12 +37,28 @@
       <h1>Vitor Desentupidora</h1>
     </header>
     <div class="fixed-callable-numbers">
-      <a href="tel:5513996255448">
-        <button type="button" class="button-call call-0800">botão 0800</button>
-      </a>
-      <a class="whatsapp-send-message" target="_blank">
-        <button type="button" class="button-call call-whatsapp">botão whatsapp</button>
-      </a>
+        <button type="button" class="button-call call-number" onclick="handleShowCallModal()">ligue para nós</button>
+        <button type="button" class="button-call call-whatsapp" onclick="handleShowMessageModal()">whatsapp</button>
+    </div>
+    <div class="modal-overlay">
+      <div class="modal call-modal-ddd-choice">
+        <div class="close-modal">&#10005;</div>
+        <p>Ligue para um de nossos números:</p>
+        <ul>
+          <li><a href="tel:5511777777777">📞 DDD 011 - Grande SP e Capital</a></li>
+          <li><a href="tel:5513777777777">📞 DDD 013 - Litoral de SP</a></li>
+          <li><a href="tel:551777777777">📞 DDD 019 - Região de Campinas</a></li>
+        </ul>
+      </div>
+      <div class="modal message-modal-ddd-choice">
+        <div class="close-modal">&#10005;</div>
+        <p>Nos chame no whatsapp em um de nossos números:</p>
+        <ul>
+          <li><a class="whatsapp-send-message-ddd-11" target="_blank">👉 DDD 011 - Grande SP e Capital</a></li>
+          <li><a class="whatsapp-send-message-ddd-13" target="_blank">👉 DDD 013 - Litoral de SP</a></li>
+          <li><a class="whatsapp-send-message-ddd-19" target="_blank">👉 DDD 019 - Região de Campinas</a></li>
+        </ul>
+      </div>
     </div>
 
     <!-- MAIN -->
@@ -57,11 +73,27 @@
           <ul class="region-area__list">
             <li>Grande São Paulo e Capital</li>
             <li>Litoral de São Paulo</li>
-            <li>Campinas</li>
+            <li>Região de Campinas</li>
           </ul>
+
+          <div class="card-locais">
+            <p>Realizamos serviçoes em:</p>
+            <div class="card-locais__card">
+              <img class="card_locais__image" src="./assets/icons/home.svg" alt="imagem de uma casa">
+              <p class="card__text">Casas, apartementos e condomínios</p>
+            </div>
+            <div class="card-locais__card">
+              <img class="card_locais__image" src="./assets/icons/building.svg" alt="imagem de um prédio">
+              <p class="card__text">Empresas, comércios e indústrias</p>
+            </div>
+          </div>
+
+          <div class="forma-pagamentos">
+             
+          </div>
         </div>
       </section>
-      <section class="  ">
+      <section>
         <div class="plumper-illustration-container">
           <img src="./assets/images/plumber_repairing_pipe_burst.jpg" alt="ilustração de profissionais de desentupimento">
         </div>
@@ -95,7 +127,7 @@
       </section>
 
       <section class="section-about-us">
-        <h2 class="section-title">Sobre nós</h2>
+        <h2 class="section-title--white">Sobre nós</h2>
         <p>Com uma equipe especializada em desentupimento, buscamos proporcionar ao cliente um atendimento de qualidade, visando sempre o conforto e atendendo atenciosamente as necessidades.</p>
         <p>Em até 40 minutos fazemos seu agendamento! Visita gratuita e serviço com garantia de 90 dias.</p>
       </section>
@@ -105,10 +137,10 @@
       <div class="scroll-to-top-icon"></div>
     </button>
     <!-- WHATSAPP FLOATING LOGO -->
-    <div class="whatsapp-container" onclick="handleWhatsappClick()">
-      <a class="whatsapp-send-message" target="_blank">
+    <div class="whatsapp-container" onclick="handleShowMessageModal()">
+      <!-- <a class="whatsapp-send-message" target="_blank"> -->
         <img src="./assets/icons/whatsapp-icon.svg" alt="whatsapp logo para contato">
-      </a>
+      <!-- </a> -->
     </div>
 
     <!-- FOOTER -->

@@ -68,41 +68,104 @@ header {
 .fixed-callable-numbers {
   height: 3rem;
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .fixed-callable-numbers > div {
   width: 100%;
 }
 
-.fixed-callable-numbers > a {
+.button-call {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.button-call {
-  width: inherit;
-  height: inherit;
   border: none;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
-.button-call.call-0800 {
-  border-right: 3px solid var(--main-color);
+.button-call:active {
+  background-color: rgb(218, 218, 218) !important;
+}
+
+.button-call.call-number {
+  background-color: var(--accent-color);
+  color: var(--white);
   transition: background-color 200ms ease-in;
 }
 
-.button-call.call-0800:hover {
-  background-color: #00000050;
+.button-call.call-number:hover {
+  background-color: #ff5b5b;
 }
 
 .button-call.call-whatsapp {
   background-color: #4bd35d;
+  color: var(--white);
   transition: background-color 200ms ease-in;
 }
 
 .button-call.call-whatsapp:hover {
   background-color: #35ee4e;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--white);
+  width: 92%;
+  text-align: center;
+  padding: 4rem .5rem;
+  z-index: 3;
+  border-radius: 7px;
+  border: 2px solid var(--border-color);
+  display: none;
+  animation: showModalAnimation 400ms forwards;
+}
+
+@keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -90%, 0);
+  }
+
+  100% {
+    opacity: initial;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: .5rem .8rem .5rem .5rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.modal > ul {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: 1.5rem;
+}
+
+.show-modal {
+  display: initial;
 }
 
 /* MAIN */
@@ -133,19 +196,17 @@ main {
 }
 
 .region-area {
-  position: absolute;
-  bottom: -11.5rem;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-  width: 90%;
-  padding: .5rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem .5rem;
   border-radius: 7px;
   background-color: var(--grey);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .region-area__map-image {
   width: 3rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
 }
 
 .region-area__list {
@@ -155,6 +216,25 @@ main {
 .region-area__list > li {
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+.card-locais {
+  margin: 2rem 1rem 0;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.card-locais__card {
+  background-color: var(--white);
+  border: 3px solid var(--border-color);
+  border-radius: 7px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.card_locais__image {
+  max-width: 3rem;
+  margin: 0 auto 1rem;
 }
 
 .servicos-section {
@@ -189,11 +269,16 @@ main {
 }
 
 .plumper-illustration-container {
-  margin-top: 10.5rem;
+  
 }
 
 .section-title {
   font-size: 1.2rem;
+  text-align: center;
+}
+
+.section-title--white {
+  color: var(--white);
   text-align: center;
 }
 
@@ -209,8 +294,13 @@ main {
   border-radius: 7px;
   border: 2px solid var(--border-color);
   padding: 1rem;
-  text-align: center;
   box-shadow: 0 0 3px var(--border-color);
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .card__title {
@@ -292,12 +382,13 @@ main {
 
 .whatsapp-container::after {
   content: 'Estamos online! 😉👉';
+  font-size: .85rem;
   position: absolute;
   background-color: var(--white);
   padding: .5rem .85rem;
   border-radius: 5px;
   position: absolute;
-  left: -13.5rem;
+  left: -11.8rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   animation: showPopover 350ms forwards;
 }
@@ -308,7 +399,7 @@ main {
   height: 15px;
   background-color: var(--white);
   position: absolute;
-  left: -2rem;
+  left: -1.8rem;
   z-index: 2;
   transform: rotate(45deg);
   animation: showPopover 350ms forwards;
@@ -374,6 +465,10 @@ footer {
   .section-title {
     font-size: 1.8rem;
   }
+
+  .section-title--white {
+    font-size: 1.8rem;
+  }
   
   /* HEADER */
 
@@ -395,17 +490,27 @@ footer {
     font-size: 1.2rem;
   }
 
+  .card-locais {
+    
+  }
+
+  .card-locais__card {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .main-advertising__text-highlight {
     font-size: 2rem;
   }
 
   .plumper-illustration-container {
-    width: 65%;
-    margin: 10rem auto 0 auto;
+    width: 70%;
+    margin: 0 auto;
   }
 
   .badges-area {
-    margin: 2rem 0 5rem;
+    margin: 2rem 0 6rem;
   }
 
   .badges-area > li {
