@@ -65,6 +65,10 @@ header {
   border-bottom: 1.5px solid var(--border-color);
 }
 
+.highlight-letter {
+  color: var(--main-color);
+}
+
 .fixed-callable-numbers {
   height: 3rem;
   display: flex;
@@ -160,8 +164,15 @@ header {
 .modal > ul {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
   margin-top: 1.5rem;
+}
+
+.call-and-message-link {
+  color: black;
+  padding: .2rem;
+  background-color: #E0FBFC70;
+  border-radius: 5px;
 }
 
 .show-modal {
@@ -474,6 +485,10 @@ footer {
 
   /* MAIN */
 
+  p {
+    font-size: 1.2rem;
+  }
+
   .main-advertising__text {
     font-size: 1.2rem;
   }
@@ -490,14 +505,14 @@ footer {
     font-size: 1.2rem;
   }
 
-  .card-locais {
-    
+  .card-locais__wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
   }
 
   .card-locais__card {
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 3rem;
   }
 
   .main-advertising__text-highlight {

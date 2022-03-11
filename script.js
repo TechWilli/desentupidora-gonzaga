@@ -12,13 +12,13 @@ const closeModal = document.querySelectorAll('.close-modal');
 
 function addWhatsAppHref() {
   // console.log('whatsappHref', whatsappHref)
-  const messageToSend = 'Olá, vim pelo site site_aqui. Preciso de mais informações sobre!';
+  const messageToSend = 'Olá, vim pelo site http://desentupidoragonzaga.com.br. Preciso de mais informações sobre!';
   // whatsappHref[0].href = `https://api.whatsapp.com/send?phone=numero_aqui&text=${encodeURI(messageToSend)}`;
   // whatsappHref[1].href = `https://api.whatsapp.com/send?phone=numero_aqui&text=${encodeURI(messageToSend)}`;
 
-  whatsappHrefDDD011.href = `https://api.whatsapp.com/send?phone=numero_aqui011&text=${encodeURI(messageToSend)}`;
-  whatsappHrefDDD013.href = `https://api.whatsapp.com/send?phone=numero_aqui013&text=${encodeURI(messageToSend)}`;
-  whatsappHrefDDD019.href = `https://api.whatsapp.com/send?phone=numero_aqui019&text=${encodeURI(messageToSend)}`;
+  whatsappHrefDDD011.href = `https://api.whatsapp.com/send?phone=5511964684617&text=${encodeURI(messageToSend)}`;
+  whatsappHrefDDD013.href = `https://api.whatsapp.com/send?phone=5513991704074&text=${encodeURI(messageToSend)}`;
+  whatsappHrefDDD019.href = `https://api.whatsapp.com/send?phone=5519987114339&text=${encodeURI(messageToSend)}`;
 }
 
 function handleShowMessageModal() {
