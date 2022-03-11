@@ -399,7 +399,7 @@ main {
   padding: .5rem .85rem;
   border-radius: 5px;
   position: absolute;
-  left: -11.8rem;
+  left: -11.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   animation: showPopover 350ms forwards;
 }
@@ -410,7 +410,7 @@ main {
   height: 15px;
   background-color: var(--white);
   position: absolute;
-  left: -1.8rem;
+  left: -1.7rem;
   z-index: 2;
   transform: rotate(45deg);
   animation: showPopover 350ms forwards;
@@ -445,6 +445,10 @@ footer {
   padding: 2rem .8rem;
   font-size: .875rem;
   text-align: center;
+}
+
+.email-container {
+  margin-bottom: 1.5rem;
 }
 
 .copyright {
@@ -572,5 +576,7 @@ footer {
   }
 
   /* FOOTER */
-
+  .email-link {
+    font-size: 1.2rem;
+  }
 }
