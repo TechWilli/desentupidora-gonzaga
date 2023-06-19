@@ -169,10 +169,11 @@ header {
 }
 
 .call-and-message-link {
-  color: black;
+  /* color: black;
   padding: 0.2rem;
   background-color: #e0fbfc70;
-  border-radius: 5px;
+  border-radius: 5px; */
+  width: 100%;
 }
 
 .show-modal {

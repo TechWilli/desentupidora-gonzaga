@@ -54,8 +54,13 @@
       <h1><span class="highlight-letter">D</span>esentupidora <span class="highlight-letter">G</span>onzaga</h1>
     </header>
     <div class="fixed-callable-numbers">
-      <button type="button" class="button-call call-number" onclick="handleShowCallModal()">Ligue para nós</button>
-      <button type="button" class="button-call call-whatsapp" onclick="handleShowMessageModal()">Whatsapp</button>
+      <!-- <button type="button" class="button-call call-number" onclick="handleShowCallModal()">Ligue para nós</button>
+      <button type="button" class="button-call call-whatsapp" onclick="handleShowMessageModal()">Whatsapp</button> -->
+      <a class="call-and-message-link"
+         href="tel:5519987114339"><button type="button" class="button-call call-number">Ligue para nós</button></a>
+      <a
+         class="whatsapp-send-message-ddd-19 call-and-message-link" target="_blank"><button type="button"
+                class="button-call call-whatsapp">Whatsapp</button></a>
     </div>
     <div class="modal-overlay">
       <div class="modal call-modal-ddd-choice">
@@ -64,9 +69,9 @@
         <br />
         <p>&#8595;</p>
         <ul>
-          <!-- <li><a class="call-and-message-link" href="tel:5511964684617">📞 DDD 011 - Grande SP e Capital</a></li> -->
-          <li><a class="call-and-message-link" href="tel:5513991704074">📞 DDD 013 - Litoral de SP</a></li>
-          <li><a class="call-and-message-link" href="tel:5519987114339">📞 DDD 019 - Região de Campinas</a></li>
+          <!-- <li><a class="call-and-message-link" href="tel:5511964684617">📞 DDD 011</a></li> -->
+          <!-- <li><a class="call-and-message-link" href="tel:5513991704074">📞 DDD 013</a></li> -->
+          <!-- <li><a class="call-and-message-link" href="tel:5519987114339">📞 DDD 019</a></li> -->
         </ul>
       </div>
       <div class="modal message-modal-ddd-choice">
@@ -76,11 +81,10 @@
         <p>&#8595;</p>
         <ul>
           <!-- <li><a class="whatsapp-send-message-ddd-11 call-and-message-link" target="_blank">👉 DDD 011 - Grande SP e
-              Capital</a></li> -->
-          <li><a class="whatsapp-send-message-ddd-13 call-and-message-link" target="_blank">👉 DDD 013 - Litoral de
-              SP</a></li>
-          <li><a class="whatsapp-send-message-ddd-19 call-and-message-link" target="_blank">👉 DDD 019 - Região de
-              Campinas</a></li>
+          Capital</a></li> -->
+          <!-- <li><a class="whatsapp-send-message-ddd-13 call-and-message-link" target="_blank">👉 DDD 013 - Litoral de
+              SP</a></li> -->
+          <!-- <li><a class="whatsapp-send-message-ddd-19 call-and-message-link" target="_blank">👉 DDD 019</a></li> -->
         </ul>
       </div>
     </div>
@@ -176,10 +180,13 @@
       <div class="scroll-to-top-icon"></div>
     </button>
     <!-- WHATSAPP FLOATING LOGO -->
-    <div class="whatsapp-container" onclick="handleShowMessageModal()">
-      <!-- <a class="whatsapp-send-message" target="_blank"> -->
-      <img src="./assets/icons/whatsapp-icon.svg" alt="whatsapp logo para contato">
-      <!-- </a> -->
+    <!-- <div class="whatsapp-container" onclick="handleShowMessageModal()"> -->
+    <div class="whatsapp-container">
+      <a
+         class="whatsapp-send-message-ddd-19-floating" target="_blank">
+        <img src="./assets/icons/whatsapp-icon.svg" alt="whatsapp logo para contato">
+
+      </a>
     </div>
 
     <!-- FOOTER -->

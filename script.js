@@ -1,8 +1,9 @@
 const backToTopButton = document.querySelector('.scroll-to-top-button');
 const whatsappHref = document.querySelectorAll('.whatsapp-send-message');
-const whatsappHrefDDD011 = document.querySelector('.whatsapp-send-message-ddd-11');
-const whatsappHrefDDD013 = document.querySelector('.whatsapp-send-message-ddd-13');
+// const whatsappHrefDDD011 = document.querySelector('.whatsapp-send-message-ddd-11');
+// const whatsappHrefDDD013 = document.querySelector('.whatsapp-send-message-ddd-13');
 const whatsappHrefDDD019 = document.querySelector('.whatsapp-send-message-ddd-19');
+const whatsappHrefDDD019Floating = document.querySelector('.whatsapp-send-message-ddd-19-floating');
 
 const callModal = document.querySelector('.call-modal-ddd-choice');
 const messageModal = document.querySelector('.message-modal-ddd-choice');
@@ -16,9 +17,10 @@ function addWhatsAppHref() {
   // whatsappHref[0].href = `https://api.whatsapp.com/send?phone=numero_aqui&text=${encodeURI(messageToSend)}`;
   // whatsappHref[1].href = `https://api.whatsapp.com/send?phone=numero_aqui&text=${encodeURI(messageToSend)}`;
 
-  whatsappHrefDDD011.href = `https://api.whatsapp.com/send?phone=5511964684617&text=${encodeURI(messageToSend)}`;
-  whatsappHrefDDD013.href = `https://api.whatsapp.com/send?phone=5513991704074&text=${encodeURI(messageToSend)}`;
+  // whatsappHrefDDD011.href = `https://api.whatsapp.com/send?phone=5511964684617&text=${encodeURI(messageToSend)}`;
+  // whatsappHrefDDD013.href = `https://api.whatsapp.com/send?phone=5513991704074&text=${encodeURI(messageToSend)}`;
   whatsappHrefDDD019.href = `https://api.whatsapp.com/send?phone=5519987114339&text=${encodeURI(messageToSend)}`;
+  whatsappHrefDDD019Floating.href = `https://api.whatsapp.com/send?phone=5519987114339&text=${encodeURI(messageToSend)}`;
 }
 
 function handleShowMessageModal() {
