@@ -19,8 +19,8 @@ function addWhatsAppHref() {
 
   // whatsappHrefDDD011.href = `https://api.whatsapp.com/send?phone=5511964684617&text=${encodeURI(messageToSend)}`;
   // whatsappHrefDDD013.href = `https://api.whatsapp.com/send?phone=5513991704074&text=${encodeURI(messageToSend)}`;
-  whatsappHrefDDD019.href = `https://api.whatsapp.com/send?phone=5519987114339&text=${encodeURI(messageToSend)}`;
-  whatsappHrefDDD019Floating.href = `https://api.whatsapp.com/send?phone=5519987114339&text=${encodeURI(messageToSend)}`;
+  whatsappHrefDDD019.href = `https://api.whatsapp.com/send?phone=5519983299887&text=${encodeURI(messageToSend)}`;
+  whatsappHrefDDD019Floating.href = `https://api.whatsapp.com/send?phone=5519983299887&text=${encodeURI(messageToSend)}`;
 }
 
 function handleShowMessageModal() {
